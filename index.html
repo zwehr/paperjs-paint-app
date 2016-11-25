@@ -4,16 +4,24 @@
     
     <head>
         
-    <!-- Load the Paper.js library -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.10.2/paper-full.min.js"></script>
-        
-    <!-- Define inlined PaperScript associate it with myCanvas -->
-    <script type="text/paperscript" src="script.js" canvas="myCanvas"></script>
+    <link rel=stylesheet type="text/css" href="styles.css">
         
     </head>
     
     <body>
         <canvas id="myCanvas" resize></canvas>
+        <div class="color-choice" id="black"></div>
+        <div class="color-choice" id="red"></div>
+        <div class="color-choice" id="green"></div>
+        <div class="color-choice" id="blue"></div>
+        
+        <!-- jQuery -->
+        <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <!-- Paper.js -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.10.2/paper-full.min.js"></script>
+        <!-- mine -->
+        <script type="text/paperscript" src="script.js" canvas="myCanvas"></script>
+        
     </body>
     
 </html>
