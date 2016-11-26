@@ -11,36 +11,72 @@ canvas[resize] {
     height: 100%;
 }
 
-.color-choice {
+.color-button {
     position: absolute;
     height: 25px;
     width: 25px;
+    border-radius: 5px;
 }
 
-.color-choice:hover {
-    border: 1px solid black;
+.color-button:hover {
+    cursor: pointer;
+    box-shadow: 2px 2px 2px #000;
+}
+
+#current-color {
+    position: absolute;
+    background-color: black;
+    height: 55px;
+    width: 55px;
+    top: 10px;
+    left: 10px;
+    border-radius: 5px;
 }
 
 #black {
     background-color: black;
-    top: 10px;
+    top: 70px;
     left: 10px;
 }
 
 #red {
     background-color: red;
-    top: 40px;
+    top: 100px;
     left: 10px;
 }
 
 #green {
     background-color: green;
-    top: 70px;
+    top: 130px;
     left: 10px;
 }
 
 #blue {
     background-color: blue;
-    top: 100px;
+    top: 160px;
     left: 10px;
+}
+
+#purple {
+    background-color: purple;
+    top: 70px;
+    left: 40px;
+}
+
+#yellow {
+    background-color: yellow;
+    top: 100px;
+    left: 40px;
+}
+
+#orange {
+    background-color: orange;
+    top: 130px;
+    left: 40px;
+}
+
+#pink {
+    background-color: pink;
+    top: 160px;
+    left: 40px;
 }
