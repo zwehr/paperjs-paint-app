@@ -11,6 +11,17 @@ canvas[resize] {
     height: 100%;
 }
 
+#options-toolbar {
+    background-color: #ddd;
+    width: 75px;
+    height: 600px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
 .color-button {
     position: absolute;
     height: 25px;
