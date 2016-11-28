@@ -3,6 +3,7 @@ body {
     margin: 0;
     overflow: hidden;
     height: 100%;
+    font-family: 'Helvetica', 'Arial', sans-serif;
 }
 
 /* Scale canvas with resize attribute to full size */
@@ -93,18 +94,18 @@ canvas[resize] {
 }
 
 #increase-width {
-    top: 260px;
+    top: 240px;
     left: 40px;
-    font-size: 20px;
+    font-size: 25px;
     background-color: #888;
     border-radius: 5px;
     text-align: center;
 }
 
 #decrease-width {
-    top: 260px;
+    top: 240px;
     left: 10px;
-    font-size: 20px;
+    font-size: 25px;
     background-color: #888;
     border-radius: 5px;
     text-align: center;
@@ -113,9 +114,11 @@ canvas[resize] {
 #current-width {
     position: absolute;
     background-color: #fff;
-    height: 55px;
+    height: 35px;
     width: 55px;
     top: 200px;
     left: 10px;
     border-radius: 5px;
+    font-size: 40px;
+    text-align: center;
 }

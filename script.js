@@ -14,3 +14,23 @@ $(".color-button").click(function() {
     //display current color above color options
     $("#current-color").css({backgroundColor: currentColor});
 });
+
+$("#current-width").html(width);
+
+$("#increase-width").click(function() {
+    if (width == 95) {
+        alert ("Cannot have width of 100+!");
+    } else {
+        width+= 5;
+        $("#current-width").html(width);
+    }
+})
+
+$("#decrease-width").click(function() {
+    if (width == 0) {
+        alert("Cannot have a negative width!");
+    } else {
+        width-= 5;
+        $("#current-width").html(width);
+    }
+})
