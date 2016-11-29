@@ -93,6 +93,18 @@ canvas[resize] {
     left: 40px;
 }
 
+#current-width {
+    position: absolute;
+    background-color: #fff;
+    height: 35px;
+    width: 55px;
+    top: 200px;
+    left: 10px;
+    border-radius: 5px;
+    font-size: 40px;
+    text-align: center;
+}
+
 #increase-width {
     top: 240px;
     left: 40px;
@@ -111,14 +123,38 @@ canvas[resize] {
     text-align: center;
 }
 
-#current-width {
+#current-tool {
     position: absolute;
     background-color: #fff;
-    height: 35px;
+    height: 55px;
     width: 55px;
-    top: 200px;
+    top: 280px;
     left: 10px;
     border-radius: 5px;
     font-size: 40px;
     text-align: center;
+}
+
+.tool-button {
+    background-color: #888;
+}
+
+#brush {
+    top: 350px;
+    left: 10px;
+}
+
+#line {
+    top: 350px;
+    left: 40px;
+}
+
+#circle {
+    top: 380px;
+    left: 10px;
+}
+
+#rectangle {
+    top: 380px;
+    left: 40px;
 }
