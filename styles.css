@@ -93,13 +93,19 @@ canvas[resize] {
     left: 40px;
 }
 
+#hash {
+    position: absolute;
+    top: 195px;
+    left: 5px;
+}
+
 #hex-value {
-    width: 53px;
+    width: 50px;
     border-radius: 5px;
     border-style: none;
     position: absolute;
     top: 195px;
-    left: 10px;
+    left: 15px;
 }
 
 #apply-hex {
