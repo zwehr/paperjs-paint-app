@@ -33,12 +33,13 @@
             <div class="small-button" id="increase-width">+</div>
             <div class="small-button" id="decrease-width">-</div>
             
-            <div id="current-tool">current</div>
-            
-            <div class="small-button tool-button" id="brush">brush</div>
-            <div class="small-button tool-button" id="line">line</div>
-            <div class="small-button tool-button" id="circle">circle</div>
-            <div class="small-button tool-button" id="rectangle">rectangle</div>
+            <form id="tools">
+                <input type="radio" name="tool" value="cirle" checked>Circle<br>
+                <input type="radio" name="tool" value="brush">Brush<br>
+                <input type="radio" name="tool" value="square">Square<br>
+                <input type="radio" name="tool" value="line">Line
+            </form>
+                
         </div>
         
         <!-- jQuery -->

@@ -149,38 +149,7 @@ input{
     text-align: center;
 }
 
-#current-tool {
+#tools {
     position: absolute;
-    background-color: #fff;
-    height: 55px;
-    width: 55px;
-    top: 320px;
-    left: 10px;
-    border-radius: 5px;
-    font-size: 40px;
-    text-align: center;
-}
-
-.tool-button {
-    background-color: #888;
-}
-
-#brush {
     top: 400px;
-    left: 10px;
-}
-
-#line {
-    top: 400px;
-    left: 40px;
-}
-
-#circle {
-    top: 430px;
-    left: 10px;
-}
-
-#rectangle {
-    top: 430px;
-    left: 40px;
 }
