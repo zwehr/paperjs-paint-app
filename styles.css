@@ -12,12 +12,34 @@ canvas[resize] {
     height: 100%;
 }
 
-#options-toolbar {
+#color-container {
     background-color: #ddd;
     width: 75px;
-    height: 600px;
+    height: 250px;
     position: absolute;
     top: 0px;
+    left: 0px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+#tool-container {
+    background-color: #ddd;
+    width: 75px;
+    height: 100px;
+    position: absolute;
+    top: 255px;
+    left: 0px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+#size-container {
+    background-color: #ddd;
+    width: 75px;
+    height: 90px;
+    position: absolute;
+    top: 360px;
     left: 0px;
     margin: 10px;
     border-radius: 5px;
@@ -124,7 +146,7 @@ input{
     background-color: #fff;
     height: 35px;
     width: 55px;
-    top: 250px;
+    top: 10px;
     left: 10px;
     border-radius: 5px;
     font-size: 40px;
@@ -132,7 +154,7 @@ input{
 }
 
 #increase-width {
-    top: 290px;
+    top: 50px;
     left: 40px;
     font-size: 25px;
     background-color: #888;
@@ -141,7 +163,7 @@ input{
 }
 
 #decrease-width {
-    top: 290px;
+    top: 50px;
     left: 10px;
     font-size: 25px;
     background-color: #888;
@@ -150,6 +172,5 @@ input{
 }
 
 #tools {
-    position: absolute;
-    top: 400px;
+    margin-top: 10px;
 }
