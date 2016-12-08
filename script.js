@@ -1,10 +1,32 @@
 var currentColor = "black";
-var currentTool = "circle";
+var currentTool = "line";
 var width = 30;
 
-function onMouseDown(event) {
-    var circle = Shape.Circle(event.point, width);
-    circle.fillColor = currentColor;
+switch (currentTool) {
+    case "circle":
+        alert("circle");
+        function onMouseDown(event) {
+            alert("hi");
+            var circle = Shape.Circle(event.point, width);
+            circle.fillColor = currentColor;
+        }
+        break;
+        
+    case "line":
+        alert("line");
+        var myPath;
+
+        function onMouseDown(event) {
+            myPath = new Path();
+            myPath.strokeColor = currentColor;
+            myPath.strokeWidth = width;
+            myPath.add(event.point);
+        }
+
+        function onMouseUp(event) {
+            myPath.add(event.point);
+        }
+        break;
 }
 
 $(".color-button").click(function() {
