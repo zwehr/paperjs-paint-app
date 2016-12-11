@@ -32,6 +32,13 @@ function onMouseUp(event) {
     }
 }
 
+//change currentTool if different radio button selected
+$('#toolForm input').on('change', function() {
+    alert($('input[name=tool]:checked', '#toolForm').val());
+    alert("currentTool is set to: " + currentTool);
+    currentTool = $('input[name=tool]:checked', '#toolForm').val(); 
+});
+
 $(".color-button").click(function() {
     //update currentColor variable from clicked background-color
     currentColor = $(this).css("background-color");
