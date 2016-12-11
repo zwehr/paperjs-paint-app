@@ -1,32 +1,35 @@
 var currentColor = "black";
-var currentTool = "line";
+var currentTool = "circle";
 var width = 30;
+var myPath;
 
-switch (currentTool) {
-    case "circle":
-        alert("circle");
-        function onMouseDown(event) {
-            alert("hi");
+function onMouseDown(event) {
+    switch (currentTool) {
+        case "circle":
             var circle = Shape.Circle(event.point, width);
             circle.fillColor = currentColor;
-        }
-        break;
-        
-    case "line":
-        alert("line");
-        var myPath;
-
-        function onMouseDown(event) {
+            break;
+        case "line":
             myPath = new Path();
             myPath.strokeColor = currentColor;
             myPath.strokeWidth = width;
             myPath.add(event.point);
-        }
+            break;
+        default:
+            alert("Error: No tool selected");
+            break;
+    }
+}
 
-        function onMouseUp(event) {
+function onMouseUp(event) {
+    switch (currentTool) {
+        case "line":
             myPath.add(event.point);
-        }
-        break;
+            break;
+        default:
+            console.log("currentTool must be circle. No code needed for mouseUp");
+            break;
+    }
 }
 
 $(".color-button").click(function() {
