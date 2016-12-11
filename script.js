@@ -1,7 +1,8 @@
 var currentColor = "black";
 var currentTool = "circle";
 var width = 30;
-var myPath;
+var linePath;
+var brushPath;
 
 function onMouseDown(event) {
     switch (currentTool) {
@@ -10,13 +11,28 @@ function onMouseDown(event) {
             circle.fillColor = currentColor;
             break;
         case "line":
-            myPath = new Path();
-            myPath.strokeColor = currentColor;
-            myPath.strokeWidth = width;
-            myPath.add(event.point);
+            linePath = new Path();
+            linePath.strokeColor = currentColor;
+            linePath.strokeWidth = width;
+            linePath.add(event.point);
+            break;
+        case "brush":
+            brushPath = new Path();
+            brushPath.strokeColor = currentColor;
+            brushPath.strokeWidth = width;
             break;
         default:
-            alert("Error: No tool selected");
+            break;
+    }
+}
+
+function onMouseDrag(event) {
+    switch(currentTool) {
+        case "brush":
+            console.log("draggings");
+            brushPath.add(event.point);
+            break;
+        default:
             break;
     }
 }
@@ -24,7 +40,7 @@ function onMouseDown(event) {
 function onMouseUp(event) {
     switch (currentTool) {
         case "line":
-            myPath.add(event.point);
+            linePath.add(event.point);
             break;
         default:
             console.log("currentTool must be circle. No code needed for mouseUp");
@@ -34,9 +50,8 @@ function onMouseUp(event) {
 
 //change currentTool if different radio button selected
 $('#toolForm input').on('change', function() {
-    alert($('input[name=tool]:checked', '#toolForm').val());
-    alert("currentTool is set to: " + currentTool);
-    currentTool = $('input[name=tool]:checked', '#toolForm').val(); 
+    currentTool = $('input[name=tool]:checked', '#toolForm').val();
+    alert("currentTool is: " + currentTool);
 });
 
 $(".color-button").click(function() {

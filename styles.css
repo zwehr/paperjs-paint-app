@@ -26,7 +26,7 @@ canvas[resize] {
 #tool-container {
     background-color: #ddd;
     width: 75px;
-    height: 100px;
+    height: 120px;
     position: absolute;
     top: 255px;
     left: 0px;
@@ -39,7 +39,7 @@ canvas[resize] {
     width: 75px;
     height: 90px;
     position: absolute;
-    top: 360px;
+    top: 390px;
     left: 0px;
     margin: 10px;
     border-radius: 5px;
