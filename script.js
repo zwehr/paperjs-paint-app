@@ -3,6 +3,8 @@ var currentTool = "circle";
 var width = 30;
 var linePath;
 var brushPath;
+var rectPoint1;
+var rectPoint2;
 
 function onMouseDown(event) {
     switch (currentTool) {
@@ -20,6 +22,10 @@ function onMouseDown(event) {
             brushPath = new Path();
             brushPath.strokeColor = currentColor;
             brushPath.strokeWidth = width;
+            break;
+        case "rectangle":
+            console.log("rectangle down");
+            rectPoint1 = event.point;
             break;
         default:
             break;
@@ -41,6 +47,16 @@ function onMouseUp(event) {
     switch (currentTool) {
         case "line":
             linePath.add(event.point);
+            break;
+        case "rectangle":
+            console.log("rectangle up");
+            rectPoint2 = event.point;
+            var rect = new Rectangle(rectPoint1, rectPoint2);
+            
+            var rectPath = new Path.Rectangle(rect);
+            rectPath.fillColor = currentColor;
+            
+            console.log(rect);
             break;
         default:
             console.log("currentTool must be circle. No code needed for mouseUp");
