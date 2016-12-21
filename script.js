@@ -24,7 +24,6 @@ function onMouseDown(event) {
             brushPath.strokeWidth = width;
             break;
         case "rectangle":
-            console.log("rectangle down");
             rectPoint1 = event.point;
             break;
         default:
@@ -32,10 +31,10 @@ function onMouseDown(event) {
     }
 }
 
+//mouse drag only used for brush tool
 function onMouseDrag(event) {
     switch(currentTool) {
         case "brush":
-            console.log("draggings");
             brushPath.add(event.point);
             break;
         default:
@@ -43,23 +42,19 @@ function onMouseDrag(event) {
     }
 }
 
+//finish drawing based on mouseUp position if line or rectangle is selected
 function onMouseUp(event) {
     switch (currentTool) {
         case "line":
             linePath.add(event.point);
             break;
         case "rectangle":
-            console.log("rectangle up");
             rectPoint2 = event.point;
             var rect = new Rectangle(rectPoint1, rectPoint2);
-            
             var rectPath = new Path.Rectangle(rect);
-            rectPath.fillColor = currentColor;
-            
-            console.log(rect);
+            rectPath.fillColor = currentColor;            
             break;
         default:
-            console.log("currentTool must be circle. No code needed for mouseUp");
             break;
     }
 }
@@ -67,7 +62,6 @@ function onMouseUp(event) {
 //change currentTool if different radio button selected
 $('#toolForm input').on('change', function() {
     currentTool = $('input[name=tool]:checked', '#toolForm').val();
-    alert("currentTool is: " + currentTool);
 });
 
 $(".color-button").click(function() {

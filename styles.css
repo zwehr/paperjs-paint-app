@@ -12,36 +12,27 @@ canvas[resize] {
     height: 100%;
 }
 
-#color-container {
+.option-container {
     background-color: #ddd;
     width: 75px;
-    height: 240px;
     position: absolute;
-    top: 0px;
-    left: 0px;
-    margin: 10px;
     border-radius: 5px;
+    margin: 10px;
+}
+
+#color-container {
+    height: 240px;
+    top: 0px;
 }
 
 #tool-container {
-    background-color: #ddd;
-    width: 75px;
     height: 90px;
-    position: absolute;
     top: 250px;
-    margin: 10px;
-    border-radius: 5px;
 }
 
 #size-container {
-    background-color: #ddd;
-    width: 75px;
     height: 85px;
-    position: absolute;
     top: 350px;
-    left: 0px;
-    margin: 10px;
-    border-radius: 5px;
 }
 
 .small-button {

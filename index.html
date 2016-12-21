@@ -2,16 +2,14 @@
 
 <html>
     
-    <head>
-        
+    <head>   
     <link rel=stylesheet type="text/css" href="styles.css">
-        
     </head>
     
     <body>
         <canvas id="myCanvas" resize></canvas>
         
-        <div id="color-container">
+        <div id="color-container" class="option-container">
             
             <div id="current-color"></div>
             
@@ -30,7 +28,7 @@
             
         </div>
         
-        <div id="tool-container">
+        <div id="tool-container" class="option-container">
         
             <form id="toolForm">
                 <input type="radio" name="tool" value="circle" checked>Circle<br>
@@ -41,7 +39,7 @@
         
         </div>
         
-        <div id="size-container">
+        <div id="size-container" class="option-container">
             
             <div id="current-width"></div>
             
@@ -57,6 +55,5 @@
         <!-- mine -->
         <script type="text/paperscript" src="script.js" canvas="myCanvas"></script>
         
-    </body>
-    
+    </body> 
 </html>
